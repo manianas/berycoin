@@ -98,7 +98,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL; // January 31st, 2018
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000005c13f99f6d0b1a908");
+        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000000017d17d00");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -122,11 +122,9 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x64770bab6a22948dc589626d6ae2a09fc7eea4b57763f47276dcd719f4606b48"));
         assert(genesis.hashMerkleRoot == uint256S("0x941459ea478e4567eb64f38cc6f0f7d892ef5740d15e82fdaadfea0d5730cc4f"));
 
-        vFixedSeeds.clear();
-        vSeeds.clear();
         // Note that of those with the service bits flag, most only support a subset of possible options
         //vSeeds.push_back(CDNSSeedData("bilalpc", "119.157.29.83", true));
-        //vSeeds.push_back(CDNSSeedData("bilalserver", "173.212.194.240", true));
+        vSeeds.push_back(CDNSSeedData("bilalserver", "173.212.194.240", true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,50);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,6);
